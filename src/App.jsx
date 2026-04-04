@@ -1,11 +1,11 @@
 import React from 'react'
+import About from './Components/About/About'
 
 const App = () => {
   return (
     <div>
-      <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+      <About/>
+
     </div>
   )
 }

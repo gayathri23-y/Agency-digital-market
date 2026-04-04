@@ -1,5 +1,5 @@
 import React from 'react'
-import TestimonialSection from './Components/Testimonal'
+import TestimonialSection from './Pages/Testimonal';
 const App = () => {
   return (
     <div>

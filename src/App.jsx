@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <Getintouch />
       <Form />
-      < TestimonialSection/>
+      <TestimonialSection />
    </div>
   )
 }

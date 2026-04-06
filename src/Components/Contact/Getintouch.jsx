@@ -13,8 +13,8 @@ const Getintouch = () => {
         </h1>
 
         <p className="text-base sm:text-lg md:text-2xl lg:text-3xl leading-relaxed text-gray-500 max-w-4xl mx-auto">
-          Let&apos;s discuss how we can help you achieve your digital marketing goals.
-          Get a free consultation and custom strategy proposal.
+          Let&apos;s discuss how we can help you achieve your digital marketing goals. Get a free 
+         consultation and custom strategy proposal.
         </p>
       </div>
     </section>

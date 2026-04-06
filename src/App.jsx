@@ -10,8 +10,8 @@ const App = () => {
     <div>
       <Getintouch />
       <Form />
-      <ContactInfoCards />
-      <Startegy />
+      {/* <ContactInfoCards /> */}
+      {/* <Startegy /> */}
        < TestimonialSection/>
    </div>
   )

@@ -11,7 +11,7 @@ import AboutImg from "../../assets/About/about.jpg";
 export default function AboutSection() {
   return (
     <section className="bg-white py-16 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT CONTENT */}
         <div> 
@@ -19,7 +19,7 @@ export default function AboutSection() {
             About DigitalBoost
           </span>
 
-          <h2 className="text-3xl md:text-4xl font-normal mt-4 leading-tighter text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-normal mt-4 leading-tight text-gray-900">
             We're Your Strategic Digital Marketing Partners
           </h2>
 
@@ -43,7 +43,7 @@ export default function AboutSection() {
 
           {/* CORE VALUES */}
           <div className="mt-6">
-            <h1 className="text-lg md:text-xl font-semibold text-md text-gray-900 mb-3">
+            <h1 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
               Our Core Values
             </h1>
 
@@ -118,7 +118,7 @@ export default function AboutSection() {
                 <p className="text-xs text-gray-500">
                   Delivering on our promises
                 </p>
-                <br/>
+                <br/ >
               </div>
             </div>
 
@@ -126,7 +126,7 @@ export default function AboutSection() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative">
+        <div className="relative order-last lg:order-none">
           <img
             src={AboutImg}
             alt="about"

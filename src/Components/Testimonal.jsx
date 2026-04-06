@@ -74,7 +74,7 @@ const testimonials = [
 // 🔥 MAIN COMPONENT
 export default function TestimonialSection() {
   return (
-    <section className="bg-[#f9fafb] py-12 sm:py-16 px-4">
+    <section className="bg-[#f9fafb] py-12 sm:py-16 px-16">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}

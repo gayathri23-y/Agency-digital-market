@@ -1,175 +1,139 @@
 import React from "react";
-import {
-  Search,
-  Users,
-  Mail,
-  Globe,
-  BarChart,
-} from "lucide-react";
+import { Search, Users, Mail, Globe } from "lucide-react";
 
-// ✅ EXACT PPC ICON (matches your image)
-const PPCIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    className="w-5 h-5"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    {/* triangle horn */}
-    <path d="M3 11L20 7V17L3 13V11Z" />
-    {/* curved handle */}
-    <path d="M6 13.5C6 15.5 7.5 17 9 17" />
-  </svg>
-);
+import twoIcon from "../assets/two.png";
+import sixIcon from "../assets/six.png";
 
 const Services = () => {
-  const data = [
+  const services = [
     {
-      icon: <Search />,
+      icon: <Search size={30} strokeWidth={2} />,
       title: "Search Engine Optimization",
       desc: "Boost your organic visibility and drive quality traffic with our proven SEO strategies.",
-      list: [
-        "Keyword Research",
-        "On-Page Optimization",
-        "Technical SEO",
-        "Local SEO",
-      ],
+      list: ["Keyword Research", "On-Page Optimization", "Technical SEO", "Local SEO"],
     },
     {
-      icon: <PPCIcon />, // ✅ exact match
+      icon: (
+        <img
+          src={twoIcon}
+          alt=""
+          className="w-12 h-12 object-contain scale-125"
+        />
+      ),
       title: "Pay-Per-Click Advertising",
       desc: "Get immediate results with targeted PPC campaigns across Google, Facebook, and LinkedIn.",
-      list: [
-        "Google Ads",
-        "Facebook Ads",
-        "LinkedIn Ads",
-        "Campaign Optimization",
-      ],
+      list: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "Campaign Optimization"],
     },
     {
-      icon: <Users />,
+      icon: <Users size={30} strokeWidth={2} />,
       title: "Social Media Marketing",
       desc: "Build your brand and engage your audience across all major social media platforms.",
-      list: [
-        "Content Creation",
-        "Community Management",
-        "Influencer Outreach",
-        "Social Analytics",
-      ],
+      list: ["Content Creation", "Community Management", "Influencer Outreach", "Social Analytics"],
     },
     {
-      icon: <Mail />,
+      icon: <Mail size={30} strokeWidth={2} />,
       title: "Email Marketing",
       desc: "Nurture leads and retain customers with personalized email marketing campaigns.",
-      list: [
-        "Email Automation",
-        "Newsletter Design",
-        "A/B Testing",
-        "List Segmentation",
-      ],
+      list: ["Email Automation", "Newsletter Design", "A/B Testing", "List Segmentation"],
     },
     {
-      icon: <Globe />,
+      icon: <Globe size={30} strokeWidth={2} />,
       title: "Content Marketing",
       desc: "Create compelling content that educates, engages, and converts your target audience.",
-      list: [
-        "Blog Writing",
-        "Video Production",
-        "Infographics",
-        "Content Strategy",
-      ],
+      list: ["Blog Writing", "Video Production", "Infographics", "Content Strategy"],
     },
     {
-      icon: <BarChart />, // ✅ correct 6th
+      icon: (
+        <img
+          src={sixIcon}
+          alt=""
+          className="w-10 h-10 object-contain scale-110"
+        />
+      ),
       title: "Analytics & Reporting",
       desc: "Track performance and optimize campaigns with comprehensive analytics and reporting.",
-      list: [
-        "Performance Tracking",
-        "Custom Dashboards",
-        "ROI Analysis",
-        "Monthly Reports",
-      ],
+      list: ["Performance Tracking", "Custom Dashboards", "ROI Analysis", "Monthly Reports"],
     },
   ];
 
   return (
-    <section className="pt-16 pb-16 px-16 bg-[#f3f4f6]">
-      {/* Heading */}
-      <div className="text-center mb-12">
-        <h2 className="text-[38px] font-medium text-[#111827]">
+    <div className="bg-[#f8f9fb] pt-20 pb-40">
+
+      {/* HEADER */}
+      <div className="px-4 sm:px-6 md:px-10 lg:px-16 text-center mb-14">
+        <h2 className="text-[44px] font-normal text-black mb-4">
           Our Services
         </h2>
 
-        <p className="mt-3 text-[16px] text-[#6b7280] max-w-[650px] mx-auto leading-[26px]">
-          We offer comprehensive digital marketing solutions tailored to help your business
-          grow and succeed in the digital landscape.
+        <p className="text-[18px] text-gray-500 max-w-3xl mx-auto leading-relaxed">
+          We offer comprehensive digital marketing solutions tailored to help your business grow and succeed in the digital landscape.
         </p>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-3 gap-6 mb-16">
-        {data.map((item, i) => (
+      {/* GRID */}
+      <div className="px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mb-40">
+        {services.map((item, i) => (
           <div
             key={i}
-            className="bg-white border border-[#e5e7eb] rounded-[14px] p-6 min-h-[280px]"
+            className="
+              group
+              bg-white border border-[#e5e7eb] rounded-[14px] p-6 min-h-[280px]
+              transition-all duration-300 ease-out cursor-pointer transform
+              hover:-translate-y-1
+              hover:scale-[1.03]
+              hover:shadow-md
+            "
           >
-            <div className="flex flex-col h-full">
-
-              {/* Top */}
-              <div className="space-y-3">
-                <div className="text-[#111827]">
-                  {React.cloneElement(item.icon, {
-                    className: "w-5 h-5 stroke-[1.5]",
-                  })}
-                </div>
-
-                <h3 className="text-[18px] font-medium text-[#111827]">
-                  {item.title}
-                </h3>
-
-                <p className="text-[14px] text-[#6b7280] leading-[22px]">
-                  {item.desc}
-                </p>
-              </div>
-
-              {/* List */}
-              <ul className="mt-6 space-y-2 text-[14px] text-[#4b5563]">
-                {item.list.map((li, idx) => (
-                  <li key={idx} className="flex items-center gap-2">
-                    <span className="text-xs">↗</span> {li}
-                  </li>
-                ))}
-              </ul>
-
+            <div className="mb-4 transition-transform duration-300 group-hover:scale-105">
+              {item.icon}
             </div>
+
+            <h3 className="text-[21px] font-normal text-black mb-2">
+              {item.title}
+            </h3>
+
+            <p className="text-[16px] text-gray-500 leading-[26px] mb-4">
+              {item.desc}
+            </p>
+
+            <ul className="mt-6 space-y-2 text-[14px] text-gray-600">
+              {item.list.map((li, idx) => (
+                <li key={idx} className="flex items-center gap-2">
+                  <span className="text-xs">↗</span>
+                  {li}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
 
       {/* CTA */}
-      <div className="bg-[#050816] rounded-[20px] py-14 text-center">
-        <h3 className="text-white text-[32px] font-normal mb-3">
-          Ready to Accelerate Your Growth?
-        </h3>
+      <div className="px-4 sm:px-6 md:px-10 lg:px-16 relative z-10">
+        <div className="bg-[#02021a] rounded-[24px] py-12 text-center -mt-24 shadow-xl">
 
-        <p className="text-[#9ca3af] text-[16px] mb-8">
-          Let's discuss how our digital marketing expertise can help you achieve your business goals.
-        </p>
+          <h3 className="text-white text-[30px] font-normal mb-3">
+            Ready to Accelerate Your Growth?
+          </h3>
 
-        <div className="flex justify-center gap-5">
-          <button className="bg-white text-black px-7 py-3 rounded-[10px] text-[15px] font-medium">
-            Get Free Consultation
-          </button>
+          <p className="text-gray-300 text-[16px] mb-6">
+            Let's discuss how our digital marketing expertise can help you achieve your business goals.
+          </p>
 
-          <button className="border border-white text-white px-7 py-3 rounded-[10px] text-[15px] font-medium">
-            View Our Portfolio
-          </button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-gray-200 text-black px-6 py-2.5 rounded-xl text-[14px] font-normal">
+              Get Free Consultation
+            </button>
+
+            <button className="border border-gray-600 text-white px-6 py-2.5 rounded-xl text-[14px] font-normal">
+              View Our Portfolio
+            </button>
+          </div>
+
         </div>
       </div>
-    </section>
+
+    </div>
   );
 };
 

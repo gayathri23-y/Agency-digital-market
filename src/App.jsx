@@ -1,11 +1,10 @@
 import React from 'react'
+import Services from './Components/Service'
 
 const App = () => {
   return (
     <div>
-      <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+      <Services />
     </div>
   )
 }

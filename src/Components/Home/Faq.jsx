@@ -21,13 +21,14 @@ const Faq = () => {
         },
     ]
   return (
-    <div  className='container mx-auto px-8 md:px-16 py-12'>
+    <div  className='container mx-auto px-8 md:px-16 py-20'>
         <div className='flex flex-col gap-6'>
             <h1 className='font-normal text-[24px] 
             leading-[32px] text-[#0A0A0A] text-center'>
                 Frequently Asked Questions
             </h1>
-              <div className="grid md:grid-cols-[360px_360px] md:mx-auto gap-10">
+            <br/>
+              <div className="grid md:grid-cols-[400px_400px] md:mx-auto gap-10">
             {faqdata.map((item,index)=>(
               <div key={index} className='w-full'>
                 <h3 className='text-[18px] leading-[28px] text-[#0A0A0A] font-normal'>

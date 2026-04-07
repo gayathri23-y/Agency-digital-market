@@ -1,11 +1,13 @@
 import React from 'react'
+import Faq from './Components/FQA/Faq'
+import Footer from './Components/Footer/Footer'
 
 const App = () => {
   return (
     <div>
-      <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+     <Faq/>
+     <Footer/>
+  
     </div>
   )
 }

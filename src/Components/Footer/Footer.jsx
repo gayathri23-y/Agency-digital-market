@@ -1,155 +1,122 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-const Footer = () => {
-  const footerdata = [
-    {
-      type: "contact",
-      title: "DigitalBoost",
-      desc: "We help ambitious businesses scale their online presence and drive measurable results through data-driven digital marketing strategies.",
-      contacts: [
-        { label: "hello@digitalboost.com", icon: Mail },
-        { label: "+1 (555) 123-4567", icon: Phone },
-        {
-          label: "123 Digital Avenue, Suite 100, New York, NY 10001",
-          icon: MapPin,
-        },
-      ],
-socials: [FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn]    },
-    {
-      title: "Services",
-      links: [
-        "Search Engine Optimization",
-        "Pay-Per-Click Advertising",
-        "Social Media Marketing",
-        "Email Marketing",
-        "Content Marketing",
-        "Analytics & Reporting",
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        "About Us",
-        "Our Team",
-        "Careers",
-        "Case Studies",
-        "Blog",
-        "Contact",
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        "Marketing Guide",
-        "Industry Reports",
-        "Webinars",
-        "Templates",
-        "ROI Calculator",
-        "Support Center",
-      ],
-    },
-  ];
-  const list=["legal","Privacypolicy","termsof conditions","cookiePolicy","GDPR Complains"];
-  
 
+export default function Footer() {
   return (
-    <footer className="bg-[#f5f5f7] px-6 md:px-16 py-12">
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-10 pb-10">
-        
-        {footerdata.map((column, index) => {
-          
-          // ✅ First Column (Contact)
-          if (column.type === "contact") {
-            return (
-              <div key={index}>
-                
-                {/* Title */}
-                <h2 className="text-[20px] font-medium leading-[28px] text-[#030213] mb-4">
-                  {column.title}
-                </h2>
+    <footer className="bg-gray-100 text-gray-600 pt-14 pb-6 px-6 md:px-16">
+      
+      {/* MAIN GRID */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-12">
 
-                {/* Description */}
-                <p className="text-[16px] leading-[24px] text-[#717182] max-w-[430px] mb-6">
-                  {column.desc}
-                </p>
+        {/* LEFT SECTION */}
+        <div>
+          <h2 className="text-xl font-normal text-gray-900 mb-4">
+            DigitalBoost
+          </h2>
 
-                {/* Contact Info */}
-                <ul className="space-y-3 text-[#717182] text-[14px]">
-                  {column.contacts.map((item, i) => {
-                    const Icon = item.icon;
-                    return (
-                      <li key={i} className="flex items-start text-[#717182] gap-3">
-                        <Icon className="w-4 h-4 mt-1 " />
-                        <span>{item.label}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
+          <p className="text-sm leading-relaxed mb-6">
+            We help ambitious businesses scale their online presence and
+            drive measurable results through data-driven digital marketing
+            strategies.
+          </p>
 
-                {/* Follow Us */}
-                <p className="mt-6 mb-3 text-sm font-medium text-[#030213]">
-                  Follow us:
-                </p>
-
-                {/* Social Icons */}
-                <div className="flex gap-3">
-                  {column.socials.map((Icon, i) => (
-                    <div
-                      key={i}
-                      className="bg-white rounded-[10px] w-[36px] h-[36px] flex items-center justify-center cursor-pointer hover:bg-[#00D98C] transition"
-                    >
-                      <Icon className="w-5 h-5 text-[#0A0A0A]" />
-                    </div>
-                  ))}
-                </div>
-
-              </div>
-            );
-          }
-
-          // ✅ Other Columns
-          return (
-            <div key={index}>
-              <h2 className="text-[20px] font-medium leading-[28px] text-[#030213] mb-4">
-                {column.title}
-              </h2>
-
-              <ul className="space-y-3">
-                {column.links.map((link, i) => (
-                  <li
-                    key={i}
-                    className="text-[14px] leading-[20px] text-[#717182] hover:text-[#030213] cursor-pointer transition"
-                  >
-                    {link}
-                  </li>
-                ))}
-              </ul>
+          <div className="space-y-3 text-sm">
+            <div className="flex items-center gap-2">
+              <Mail size={16} />
+              <span>hello@digitalboost.com</span>
             </div>
-          );
-        })}
+
+            <div className="flex items-center gap-2">
+              <Phone size={16} />
+              <span>+1 (555) 123-4567</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <MapPin size={16} />
+              <span>123 Digital Avenue, Suite 100, New York, NY 10001</span>
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <p className="text-sm mb-3 text-gray-800">Follow us:</p>
+            <div className="flex gap-3">
+              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map(
+                (Icon, i) => (
+                  <div
+                    key={i}
+                    className="w-9 h-9 flex items-center justify-center bg-white rounded-md shadow-sm hover:bg-gray-200 transition"
+                  >
+                    <Icon size={14} />
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* SERVICES */}
+        <div>
+          <h3 className="text-md font-normal text-gray-900 mb-4">Services</h3>
+          <ul className="space-y-2 text-sm">
+            <li>Search Engine Optimization</li>
+            <li>Pay-Per-Click Advertising</li>
+            <li>Social Media Marketing</li>
+            <li>Email Marketing</li>
+            <li>Content Marketing</li>
+            <li>Analytics & Reporting</li>
+          </ul>
+        </div>
+
+        {/* COMPANY */}
+        <div>
+          <h3 className="text-md font-normal text-gray-900 mb-4">Company</h3>
+          <ul className="space-y-2 text-sm">
+            <li>About Us</li>
+            <li>Our Team</li>
+            <li>Careers</li>
+            <li>Case Studies</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        {/* RESOURCES */}
+        <div>
+          <h3 className="text-md font-normal text-gray-900 mb-4">Resources</h3>
+          <ul className="space-y-2 text-sm">
+            <li>Marketing Guide</li>
+            <li>Industry Reports</li>
+            <li>Webinars</li>
+            <li>Templates</li>
+            <li>ROI Calculator</li>
+            <li>Support Center</li>
+          </ul>
+        </div>
+
+        {/* ✅ LEGAL (MOVE HERE — SAME GRID) */}
+        <div>
+          <h3 className="text-md font-normal text-gray-900 mb-4">Legal</h3>
+          <ul className="space-y-2 text-sm">
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>Cookie Policy</li>
+            <li>GDPR Compliance</li>
+          </ul>
+        </div>
 
       </div>
-      <ul className="space-y-3 mt-2">
-        {list.map((item,index)=>(
-           <li key={index} className="text-[#717182] text-[14px] ">{item}</li>
-        ))}
-      </ul>
-      <div className="w-full h-[1px] bg-[#717182] mt-6"></div>
-<div className="flex items-center justify-between flex-wrap md:flex-nowrap mt-6">
-  <div>
-    <p className="text-[14px] text-[#717182]">
-      © 2026 DigitalBoost. All rights reserved.
-    </p>
-  </div>
 
-  <div className="text-[14px] text-[#717182] flex gap-4 mt-2 md:mt-0">
-    <span className="cursor-pointer hover:text-white">Privacy Policy</span>
-    <span className="cursor-pointer hover:text-white">Terms of Service</span>
-    <span className="cursor-pointer hover:text-white">Cookie Policy</span>
-  </div>
-</div>    </footer>
+      {/* BOTTOM BAR */}
+      <div className="border-t mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <p>© 2026 DigitalBoost. All rights reserved.</p>
+
+        <div className="flex gap-6 mt-4 md:mt-0">
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Cookie Policy</span>
+        </div>
+      </div>
+    </footer>
   );
-};
-
-export default Footer;
+}

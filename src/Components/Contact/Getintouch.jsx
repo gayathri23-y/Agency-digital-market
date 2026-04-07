@@ -8,7 +8,7 @@ const Getintouch = () => {
           Get In Touch
         </button>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-black mb-6">
+        <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-5xl font-normal tracking-tight text-black mb-6">
           Ready to Grow Your Business?
         </h1>
 

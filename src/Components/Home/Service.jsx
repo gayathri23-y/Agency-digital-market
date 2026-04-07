@@ -1,8 +1,8 @@
 import React from "react";
 import { Search, Users, Mail, Globe } from "lucide-react";
 
-import twoIcon from "../assets/two.png";
-import sixIcon from "../assets/six.png";
+import twoIcon from "../../assets/two.png";
+import sixIcon from "../../assets/six.png";
 
 const Services = () => {
   const services = [

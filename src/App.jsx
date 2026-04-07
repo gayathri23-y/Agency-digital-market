@@ -1,9 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Header from "./Components/Header/Header";
 import Home from "./Pages/Home";
-import Services from "./Components/Service";
 
 const App = () => {
   return (
@@ -12,8 +10,7 @@ const App = () => {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/" elemennt={<Home />} />
       </Routes>
 
     </BrowserRouter>

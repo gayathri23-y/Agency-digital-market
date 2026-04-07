@@ -57,7 +57,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="bg-[#f8f9fb] pt-20 pb-40">
+    <div className="bg-[#f3f4f6] pt-20 pb-40">
 
       {/* HEADER */}
       <div className="px-4 sm:px-6 md:px-10 lg:px-16 text-center mb-14">

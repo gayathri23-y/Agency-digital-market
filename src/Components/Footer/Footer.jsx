@@ -7,10 +7,10 @@ export default function Footer() {
     <footer className="bg-gray-100 text-gray-600 pt-14 pb-6 px-6 md:px-16">
       
       {/* MAIN GRID */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-12">
 
         {/* LEFT SECTION */}
-        <div>
+        <div className="col-span-2 md:col-span-1">
           <h2 className="text-xl font-normal text-gray-900 mb-4">
             DigitalBoost
           </h2>
@@ -94,7 +94,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* ✅ LEGAL (MOVE HERE — SAME GRID) */}
+        {/* LEGAL */}
         <div>
           <h3 className="text-md font-normal text-gray-900 mb-4">Legal</h3>
           <ul className="space-y-2 text-sm">

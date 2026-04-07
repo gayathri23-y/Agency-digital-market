@@ -3,25 +3,25 @@ import heroImage from "./../../assets/Home/ADM.jpg";
 
 const Hero = () => {
   return (
-    <section className="w-full min-h-screen bg-[#f3f4f6] flex items-center pt-20 md:pt-25">
+    <section className="w-full min-h-screen bg-[#f3f4f6] flex items-center pt-20 md:pt-22">
       
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-16 lg:px-16 mb-6 md:mb-10 
                       grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
         
         {/* LEFT CONTENT */}
-        <div className="text-center md:text-left order-1 lg:order-1">
+        <div className="text-center md:text-center lg:text-left order-1 lg:order-1">
           
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-lg text-gray-900 leading-tight">
-            Grow Your Business <br /> with Digital <br /> Marketing
+            Grow Your Business <br /> with Digital Marketing
           </h1>
 
-          <p className="mt-5 text-gray-500 text-base sm:text-xl max-w-lg mx-auto md:mx-0">
+          <p className="mt-5 text-gray-500 text-base sm:text-xl max-w-lg mx-auto md:mx-auto lg:mx-0">
             We help ambitious businesses scale their online presence and drive
             measurable results through data-driven digital marketing strategies.
           </p>
 
           {/* Buttons */}
-          <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+          <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center md:justify-center lg:justify-start">
             <button className="bg-black text-white px-3 py-2 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-800 transition">
               Start Your Growth Journey 🡢
             </button>
@@ -32,10 +32,12 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-10 md:mt-12 lg:mt-15 
-                          flex flex-col sm:flex-row 
-                          gap-5 sm:gap-8 md:gap-10 lg:gap-25 
-                          text-gray-900 justify-center md:justify-start">
+          <div className="mt-10 md:mt-12 lg:mt-20 
+                          flex flex-row sm:flex-row 
+                          flex-wrap justify-center md:justify-center lg:justify-start 
+                          gap-6 sm:gap-8 md:gap-10 lg:gap-25 
+                          text-gray-900 text-center md:text-center lg:text-left">
+            
             <div>
               <h2 className="text-2xl sm:text-3xl font-lg">200+</h2>
               <p className="text-gray-500">Happy Clients</p>
@@ -50,6 +52,7 @@ const Hero = () => {
               <h2 className="text-2xl sm:text-3xl font-lg">5+ Years</h2>
               <p className="text-gray-500">Experience</p>
             </div>
+
           </div>
 
         </div>

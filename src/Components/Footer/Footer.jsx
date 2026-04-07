@@ -81,7 +81,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#about" className="hover:text-gray-900">
+              <a href="#service" className="hover:text-gray-900">
                 Our Team
               </a>
             </li>

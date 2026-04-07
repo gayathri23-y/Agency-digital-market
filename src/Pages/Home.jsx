@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./../Components/Header/Header";
 import Hero from "./../Components/Home/Hero";
-import Services from "./../Components/Home/Service";
+import Service from "./../Components/Home/Service";
 import About from "./../Components/Home/About";
 import Testimonials from "./../Components/Home/Testimonal";
 import Getintouch from "./../Components/Home/Getintouch";
@@ -18,8 +18,8 @@ const Home = () => {
         <Hero />
       </section>
 
-      <section id="services" className="scroll-mt-24">
-        <Services />
+      <section id="service" className="scroll-mt-24">
+        <Service />
       </section>
 
       <section id="about" className="scroll-mt-24">

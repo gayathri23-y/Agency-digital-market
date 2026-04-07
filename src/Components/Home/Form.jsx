@@ -32,9 +32,9 @@ export default function ContactSectionLayout() {
 
   return (
     <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-16 ">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
   {/* Left Side Form */}
-  <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-6 lg:p-11">
+  <div className="rounded-xl border border-gray-200 bg-white px-4 sm:px-6 lg:px-11 py-4 sm:py-6 lg:p-11 h-full">
     <div className="mb-8 flex items-center gap-4 text-black">
       <span className="text-xl">💬</span>
       <h2 className="text-xl sm:text-lg font-normal">

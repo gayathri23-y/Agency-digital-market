@@ -1,12 +1,23 @@
-import React from 'react'
-import Services from './Components/Service'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Header from "./Components/Header/Header";
+import Home from "./Pages/Home";
+import Services from "./Components/Service";
 
 const App = () => {
   return (
-    <div>
-      <Services />
-    </div>
-  )
-}
+    <BrowserRouter>
 
-export default App
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+
+    </BrowserRouter>
+  );
+};
+
+export default App;

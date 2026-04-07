@@ -5,7 +5,9 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 export default function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-600 pt-14 pb-6 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-[350px_1fr_1fr_1fr] gap-15">
+      
+      {/* MAIN GRID */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-12">
 
         {/* LEFT SECTION */}
         <div>
@@ -36,7 +38,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* SOCIAL */}
           <div className="mt-6">
             <p className="text-sm mb-3 text-gray-800">Follow us:</p>
             <div className="flex gap-3">
@@ -56,9 +57,7 @@ export default function Footer() {
 
         {/* SERVICES */}
         <div>
-          <h3 className="text-md font-normal text-gray-900 mb-4">
-            Services
-          </h3>
+          <h3 className="text-md font-normal text-gray-900 mb-4">Services</h3>
           <ul className="space-y-2 text-sm">
             <li>Search Engine Optimization</li>
             <li>Pay-Per-Click Advertising</li>
@@ -71,48 +70,20 @@ export default function Footer() {
 
         {/* COMPANY */}
         <div>
-          <h3 className="text-md font-normal text-gray-900 mb-4">
-            Company
-          </h3>
+          <h3 className="text-md font-normal text-gray-900 mb-4">Company</h3>
           <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#about" className="hover:text-gray-900">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="hover:text-gray-900">
-                Our Team
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-gray-900">
-                Careers
-              </a>
-            </li>
-            <li>
-              <a href="#testimonials" className="hover:text-gray-900">
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a href="#faq" className="hover:text-gray-900">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-gray-900">
-                Contact
-              </a>
-            </li>
+            <li>About Us</li>
+            <li>Our Team</li>
+            <li>Careers</li>
+            <li>Case Studies</li>
+            <li>Blog</li>
+            <li>Contact</li>
           </ul>
         </div>
 
         {/* RESOURCES */}
         <div>
-          <h3 className="text-md font-normal text-gray-900 mb-4">
-            Resources
-          </h3>
+          <h3 className="text-md font-normal text-gray-900 mb-4">Resources</h3>
           <ul className="space-y-2 text-sm">
             <li>Marketing Guide</li>
             <li>Industry Reports</li>
@@ -122,17 +93,18 @@ export default function Footer() {
             <li>Support Center</li>
           </ul>
         </div>
-      </div>
 
-      {/* LEGAL SECTION */}
-      <div className="max-w-7xl mx-auto mt-10">
-        <h3 className="text-md font-normal text-gray-900 mb-3">Legal</h3>
-        <ul className="space-y-2 text-sm">
-          <li>Privacy Policy</li>
-          <li>Terms of Service</li>
-          <li>Cookie Policy</li>
-          <li>GDPR Compliance</li>
-        </ul>
+        {/* ✅ LEGAL (MOVE HERE — SAME GRID) */}
+        <div>
+          <h3 className="text-md font-normal text-gray-900 mb-4">Legal</h3>
+          <ul className="space-y-2 text-sm">
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>Cookie Policy</li>
+            <li>GDPR Compliance</li>
+          </ul>
+        </div>
+
       </div>
 
       {/* BOTTOM BAR */}
@@ -140,15 +112,9 @@ export default function Footer() {
         <p>© 2026 DigitalBoost. All rights reserved.</p>
 
         <div className="flex gap-6 mt-4 md:mt-0">
-          <span className="hover:text-gray-700 cursor-pointer">
-            Privacy Policy
-          </span>
-          <span className="hover:text-gray-700 cursor-pointer">
-            Terms of Service
-          </span>
-          <span className="hover:text-gray-700 cursor-pointer">
-            Cookie Policy
-          </span>
+          <span>Privacy Policy</span>
+          <span>Terms of Service</span>
+          <span>Cookie Policy</span>
         </div>
       </div>
     </footer>

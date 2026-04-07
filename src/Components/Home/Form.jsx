@@ -34,17 +34,17 @@ export default function ContactSectionLayout() {
     <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-16 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
   {/* Left Side Form */}
-  <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-6 lg:p-11 h-full">
-    <div className="mb-8 flex items-center gap-3 text-black">
+  <div className="rounded-xl border border-gray-200 bg-white px-4 sm:px-6 lg:px-11 py-4 sm:py-6 lg:p-11 h-full">
+    <div className="mb-8 flex items-center gap-4 text-black">
       <span className="text-xl">💬</span>
-      <h2 className="text-xl sm:text-2xl font-medium">
+      <h2 className="text-xl sm:text-lg font-normal">
         Send us a message
       </h2>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
-        <label className="block text-base sm:text-lg mb-3">
+        <label className="block text-base sm:text-md mb-3">
           First Name
         </label>
         <input
@@ -55,7 +55,7 @@ export default function ContactSectionLayout() {
       </div>
 
       <div>
-        <label className="block text-base sm:text-lg mb-3">
+        <label className="block text-base sm:text-md mb-3">
           Last Name
         </label>
         <input
@@ -65,10 +65,10 @@ export default function ContactSectionLayout() {
         />
       </div>
     </div>
-
-    <div className="space-y-2">
+<br/>
+    <div className="space-y-6">
       <div>
-        <label className="block text-base sm:text-lg mb-3">
+        <label className="block text-base sm:text-md mb-3">
           Email Address
         </label>
         <input
@@ -79,7 +79,7 @@ export default function ContactSectionLayout() {
       </div>
 
       <div>
-        <label className="block text-base sm:text-lg mb-3">Company</label>
+        <label className="block text-base sm:text-md mb-3">Company</label>
         <input
           type="text"
           placeholder="Your Company Name"
@@ -88,7 +88,7 @@ export default function ContactSectionLayout() {
       </div>
 
       <div>
-        <label className="block text-base sm:text-lg mb-3">
+        <label className="block text-base sm:text-md mb-3">
           Phone Number
         </label>
         <input
@@ -99,7 +99,7 @@ export default function ContactSectionLayout() {
       </div>
 
       <div>
-        <label className="block text-base sm:text-lg mb-3">
+        <label className="block text-base sm:text-md mb-3">
           How can we help you?
         </label>
         <textarea
@@ -111,7 +111,7 @@ export default function ContactSectionLayout() {
     </div>
 
     <div className="mt-8">
-      <button className="w-full rounded-xl bg-black px-6 py-3 text-white font-medium flex items-center justify-center gap-2">
+      <button className="w-full rounded-xl bg-black px-6 py-3 text-white font-normal flex items-center justify-center gap-2">
         <FaTelegramPlane className="text-lg" />
         <span>Send Message</span>
       </button>
@@ -127,7 +127,7 @@ export default function ContactSectionLayout() {
             {card.icon}
           </div>
           <div>
-            <h3 className="text-xl font-medium text-black">
+            <h3 className="text-xl font-normal text-black">
               {card.title}
             </h3>
             <p className="text-gray-500">{card.line1}</p>

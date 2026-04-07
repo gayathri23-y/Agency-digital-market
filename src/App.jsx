@@ -1,17 +1,12 @@
-import React from 'react'
-import Getintouch from './Components/Contact/Getintouch'
-import TestimonialSection from './Pages/Testimonal';
-import Form from './Components/Contact/Form';
-
+import React from "react";
+import Home from "./Pages/Home";
 
 const App = () => {
   return (
-    <div>
-      <Getintouch />
-      <Form />
-      <TestimonialSection />
-   </div>
-  )
-}
+    
+    <Home/>
+    
+  );
+};
 
-export default App
+export default App;

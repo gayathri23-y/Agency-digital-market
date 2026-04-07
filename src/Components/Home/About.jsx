@@ -6,7 +6,7 @@ import {
   Target,
 } from "lucide-react";
 
-import AboutImg from "../../assets/About/about.jpg";
+import AboutImg from "../../assets/Home/about.jpg";
 
 export default function AboutSection() {
   return (
